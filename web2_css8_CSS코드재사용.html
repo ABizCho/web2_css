@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB2-CSS</title>
+        <meta charset="utf-8">
+        <style>
+        #grid {
+            display:grid;
+            grid-template-columns: 190px 1fr;
+        }
+        /*
+        block level element
+        */
+        h1 {
+            font-size:100px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin: 0px;
+            padding: 30px;
+            
+        } 
+
+        h2 {
+            margin-top:100px;
+        }
+        #grid ol { 
+            border-right: 1px solid gray;
+            width:130px;
+            margin-top:0px;
+            padding:20px;
+        }
+        body {
+            margin:0px;
+        }
+
+        /* in-line element
+        */
+        a { 
+            text-decoration:none;
+            
+            color:black;
+        }  
+
+        p {
+            margin-top:70px;
+        }   
+
+        .saw { 
+               color:gray;
+        }
+        
+        #main_title {
+            color:lightgreen;
+        }
+        #see {
+               color:lightgreen;
+               text-decoration: underline;
+        }
+        @media(max-width:800px){
+           #grid {
+              display: block; 
+           }
+           #body {
+               margin-top:60px;
+           }
+           #grid ol { 
+            border-right: none;
+           }
+           h1 {
+               border-bottom: none;
+               }
+           
+        }
+        
+          
+         </style>
+
+
+    </head>
+    <body>
+        <h1><a href="index.html" id="main_title">CSS</a></h1>
+        <div id="grid">
+            <ol>
+                <li><a href="index.html" class="saw">CSS란</a></li>
+                <li><a href="web2_css1_css예시.html" class="saw">CSS예시</a></li>
+                <li><a href="web2_css2_선택자와속성.html" class="saw">선택자와속성</a></li>
+                <li><a href="web2_css3_속성탐색.html" class="saw">속성탐색</a></li>
+                <li><a href="web2_css4_선택자탐색.html" class="saw">선택자탐색</a></li>
+                <li><a href="web2_css5_박스모델.html" class="saw">박스모델</a></li>
+                <li><a href="web2_css6_그리드.html"class="saw" >그리드</a></li>
+                <li><a href="web2_css7_반응형디자인.html" class="saw">반응형디자인</a></li>
+                <li><a href="web2_css8_CSS코드재사용.html" id="see">CSS코드재사용</a></li>
+            </ol>
+            <div id="body">
+                <h2 style="margin-top:20px;">코드 재사용</h2>
+                <p style="margin-top:40px;">
+                    한 페이지에 적용한 스타일의 변경을 다른내용의 페이지들에 적용시키다 보면 경우에 적용에 매우 오랜시간이 소요되기도 한다.
+                </p>
+                <p>
+                    이런 문제가 왜 발생하는가? 바로 코드작성시 중복되는 코드가 너무 많았기 때문이다. 이 중복을 없애줌으로써 코드 재사용시의 불필요한 반복작업을 최소한으로 줄일 수 있다.<br><br>
+
+                    <a href="web2_css5_박스모델.html"><u>박스모델</u></a> 페이지에서 중복제거 +TIP 두개를 확인할 수 있다.<br><br> <a href="https://opentutorials.org/course/3086/18327"><u>생활코딩-CSS코드의 재사용</u></a>에서 관련 강의를 확인할 수 있다.
+
+                </p>
+                <h3>link태그</h3>
+                <p>
+                    head상 style태그의 css코드 내용을 복사하여 따로 <strong><u>style.css</u></strong>파일의 소스로 폴더에 저장해두고. <br>
+                    이를 link태그를 활용하여 각 사이트를 구성하는 페이지들의 코드 스크립트의 style이 들어갈 자리에 위치시켜주는 전작업 한번으로 해당 코드 재사용 및 추후 style.css파일의 수정 한번만으로 link로 엮인 모든 페이지의 수정을 가능토록 하여 웹사이트의 유지보수시 폭발적 효과를 누릴 수 있다.
+                </p>
+                <p>
+                    <xmp>
+                        <head>
+                            <title></title>
+                            <meta charset="utf-8">
+                            <link rel="stylesheet" href="style.css">
+                        </head>
+                    </xmp>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+
+

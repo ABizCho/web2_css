@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>WEB2-CSS</title>
+        <meta charset="utf-8">
+        <style>
+            h1 {
+                font-size:60px;
+                text-align:center;
+            }
+            h2 {
+                color:red;
+                text-align:center;
+                margin-top:100px;
+            }
+
+            a { 
+                color:black;
+                text-decoration: none;
+            }
+            p {
+                text-align:center;
+                margin-top:40px; 
+            }
+            .saw { color:gray;
+                
+            }
+            .active { 
+                color:red;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1><a href="index.html">CSS</a></h1>
+        <!--
+        <ol>
+            <font color="red"><li><a href="index.html">CSS란</a></li></font>
+            <font color="red"><li><a href="web2_css1_css예시.html">CSS예시</a></li></font>
+            <font color="red"><li><a href=""></a></li></font>
+            <font color="red"><li><a href=""></a></li></font>
+            <font color="red"><li><a href=""></a></li></font>
+        </ol>
+        -->
+        <ol>
+            <li><a href="index.html" class="saw">CSS란</a></li>
+            <li><a href="web2_css1_css예시.html" class="saw">CSS예시</a></li>
+            <li><a href="web2_css2_선택자와속성.html" class="saw">선택자와 속성</a></li>
+            <li><a href="web2_css3_속성탐색.html" class="saw">속성탐색</a></li>
+            <li><a href="web2_css4_선택자탐색.html" class="saw active">선택자탐색</a></li>
+            <li><a href="web2_css5_박스모델.html">박스모델</a></li>
+            <li><a href="web2_css6_그리드.html">그리드</a></li>
+            <li><a href="web2_css7_반응형디자인.html">반응형디자인</a></li>
+            <li><a href="web2_css8_CSS코드재사용.html">CSS코드재사용</a></li>
+        </ol>
+
+        <!--
+        <h2><font color="red">CSS예시</font></h2>
+        -->
+        <h2>선택자 탐색</h2>
+
+        <p>선택자를 활용하여 링크가 걸린 페이지제목 'CSS'와 목차의 'CSS란','CSS예시','선택자와 속성','속성탐색','선택자탐색' 등의 property를 링크 접속기록,접속여부 등 현재 상태에 따라 스타일을 달리 해주고자 한다.</p>
+
+        <p>여기서 확인한 링크와 아닌것을 구분해주기 위해 선택자가 아닌 body에 속하는 Inline태그에 style을 직접 부여해줘야 하는데,<br>이때 공교롭게도 코드의 불필요한 중복이 발생한다. 이를 해결하기 위해 필요한 작업이 바로 class부여이다. 인라인(In-Line)에서 동일한 적용을 주고싶은 특정 태그들에 동일한 <u><strong>class="클래스값"</strong></u>을 부여해 준 뒤 head부분의 선택자에서 태그명이 들어갈 자리에 <strong>.class명</strong>을 넣어준 후 동일하게 선언을 넣어주면 된다.</p>
+
+
+        <p>그럴싸하게 동작하고 있음을 알 수 있다. 그러나 이와같은 모습은 사실 좋지 않다. 해당 페이지를 열어본적 있는지 여부를 판단하는 "saw"와 "active"가 선택자로 지정되어 5. 선택자탐색 에 함께 영향을 줬기 때문이다. 그러나 head에 들어간 선택자 중 active클래스가 나중에 선택되어 작동했기 때문에 빨간색으로 나타난 것이다. 즉, 순서에 영향을 받는다 (최근에 실행된 명령에 더 큰 영향을 받는다). </p>
+
+        <p>
+            하지만 이는 작업자 입장에서 큰 혼동을 줄 수 있다. 따라서 선택자로 사용될 요소들의 Level을 나눠 설정할 필요가 있는데, 이 때 id가 등장한다.<br><br>
+
+            <strong>(우선순위) id > class</strong>
+            <br><br>
+
+            <br><br>
+            id는 등장의 순서에 관계없이 class보다 높은 등급으로 작동한다.<br> class는 선택자로 언급되기 위해 <strong>.클래스명</strong> 으로 써졌지만, id는 선택자로 언급되기 위해 <strong>#id명</strong>으로 언급해준다.<br>가장 중요한 점은 id는 웹페이지의 스크립트상 반드시 단 하나만 배타적으로 'Unique'(유일무이)하게 존재해야 한다. <br><u>즉, class는 여러가지 라인을 포함하며 포괄적으로 존재할 수 있지만, 하나의 id는 반드시 단 하나만의 line을 지정해야 한다는 의미이다.</u>
+
+        </p>

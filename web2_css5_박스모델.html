@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB2-CSS</title>
+        <meta charset="utf-8">
+        <style>
+        /*
+        block level element
+        */
+        h1 {
+            font-size:100px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin: 0px;
+            padding: 30px;
+            
+        } 
+
+        h2 {
+            margin-top:100px;
+        }
+        ol { 
+            border-right: 1px solid gray;
+            width:130px;
+            margin-top:0px;
+            padding:20px;
+        }
+        body {
+            margin:0px;
+        }
+
+        /* in-line element
+        */
+        a { 
+            text-decoration:none;
+            
+            color:black;
+        }  
+
+        p {
+            margin-top:70px;
+        }   
+
+        .saw { 
+               color:gray;
+        }
+        
+        #main_title {
+            color:lightgreen;
+        }
+        #see {
+               color:lightgreen;
+               text-decoration: underline;
+        }
+        
+        
+          
+         </style>
+
+
+    </head>
+    <body>
+        <h1><a href="index.html" id="main_title">CSS</a></h1>
+        <ol>
+            <li><a href="index.html" class="saw">CSS란</a></li>
+            <li><a href="web2_css1_css예시.html" class="saw">CSS예시</a></li>
+            <li><a href="web2_css2_선택자와속성.html" class="saw">선택자와속성</a></li>
+            <li><a href="web2_css3_속성탐색.html" class="saw">속성탐색</a></li>
+            <li><a href="web2_css4_선택자탐색.html" class="saw">선택자탐색</a></li>
+            <li><a href="web2_css5_박스모델.html" class="saw" id="see">박스모델</a></li>
+            <li><a href="web2_css6_그리드.html">그리드</a></li>
+            <li><a href="web2_css7_반응형디자인.html">반응형디자인</a></li>
+            <li><a href="web2_css8_CSS코드재사용.html">CSS코드재사용</a></li>
+        </ol>
+        <h2>BOXMODEL</h2>
+        <p>
+            HTML 요소가 브라우저 엔진에서 모델링하고 그 HTML 요소의 치수 CSS 속성에서 방법을 유도하는 방법을 말한다. 그것은 HTML 웹 페이지의 구성에 대한 기본적인 개념이다.
+        </p>
+
+        <p>
+            이 박스모델에서 각 html태그 요소들의 위치와 부피감을 알기위해 stlye의 border- 를 활용할수 있다. 이를 활용하여 확인했을떄 화면 전체의 공간을 사용하는 element가 있고 (ex.h1,h2..) 반대로 자기 자신의 크기만큼의 공간만 사용하는 element가 있다. (ex.href..) <br>이 둘을 각각 <strong>Block level element</strong> 와 <strong>in-line element</strong>라고 한다.
+        </p>
+        <p>
+            이 때 block line element의 style에 display:inline; 의 선언을 추가해주면 inline element로 전환할 수 있고 반대도 가능하다.
+        </p>
+
+        <p> 
+            <u>+중복제거 TIP1)</u><br> 선택자를 지정할 때 콤마를 사용하여 한번에 다수의 element를 선택할 수 있다.
+        </p>
+        <p> 
+            <u>+중복제거 TIP2)</u><br> 하단에 나올것처럼 지정한 선택자의 border attribute 3개를 하나의 줄로 묶어서 선언하여 중복을 제거할 수 있다.
+        </p>
+        <p> 두개의 중복제거 코드의 모습은 아래와 같다.</p>
+        <xmp margin-top:80px;>
+            <head>
+                <style>
+                    h1 {
+                        border-width: 2px;
+                        border-color: red;
+                        border-style: solid;
+                    }
+                    a {
+                        border-width: 2px;
+                        border-color: red;
+                        border-style: solid;
+                    }
+                </style>
+            </head>
+        </xmp>
+        <xmp margin-top:80px;>
+            <head>
+                <style>
+                    h1,a {
+                        border: 2px solid red;
+                    }
+                </style>
+            </head>
+        </xmp>
+
+        <p> 
+            <strong>+TIP</strong> padding 속성에 px값을 주면 element와 border 테두리와의 간격을 발생시킬 수 있다.
+        </p>
+        
+        <p> 
+            <strong>+TIP</strong> margin 속성에 px값을 주어 elements간의 간격을 발생시킬 수 있다.
+        </p>
+
+        <p> 
+            <strong>+TIP</strong> CSS BOX MODEL의 4요소는 가장 안쪽부터 content, padding, border, margin까지 네개로 구성된다.
+        </p>
+    </body>
+</html>

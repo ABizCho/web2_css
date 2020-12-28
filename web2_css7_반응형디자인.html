@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB2-CSS</title>
+        <meta charset="utf-8">
+        <style>
+        #grid {
+            display:grid;
+            grid-template-columns: 190px 1fr;
+        }
+        /*
+        block level element
+        */
+        h1 {
+            font-size:100px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin: 0px;
+            padding: 30px;
+            
+        } 
+
+        h2 {
+            margin-top:100px;
+        }
+        #grid ol { 
+            border-right: 1px solid gray;
+            width:130px;
+            margin-top:0px;
+            padding:20px;
+        }
+        body {
+            margin:0px;
+        }
+
+        /* in-line element
+        */
+        a { 
+            text-decoration:none;
+            
+            color:black;
+        }  
+
+        p {
+            margin-top:70px;
+        }   
+
+        .saw { 
+               color:gray;
+        }
+        
+        #main_title {
+            color:lightgreen;
+        }
+        #see {
+               color:lightgreen;
+               text-decoration: underline;
+        }
+        @media(max-width:800px){
+           #grid {
+              display: block; 
+           }
+           #body {
+               margin-top:60px;
+           }
+           #grid ol { 
+            border-right: none;
+           }
+           h1 {
+               border-bottom: none;
+               }
+           
+        }
+        
+          
+         </style>
+
+
+    </head>
+    <body>
+        <h1><a href="index.html" id="main_title">CSS</a></h1>
+        <div id="grid">
+            <ol>
+                <li><a href="index.html" class="saw">CSS란</a></li>
+                <li><a href="web2_css1_css예시.html" class="saw">CSS예시</a></li>
+                <li><a href="web2_css2_선택자와속성.html" class="saw">선택자와속성</a></li>
+                <li><a href="web2_css3_속성탐색.html" class="saw">속성탐색</a></li>
+                <li><a href="web2_css4_선택자탐색.html" class="saw">선택자탐색</a></li>
+                <li><a href="web2_css5_박스모델.html" class="saw">박스모델</a></li>
+                <li><a href="web2_css6_그리드.html"class="saw" >그리드</a></li>
+                <li><a href="web2_css7_반응형디자인.html"id="see">반응형디자인</a></li>
+                <li><a href="web2_css8_CSS코드재사용.html">CSS코드재사용</a></li>
+            </ol>
+            <div id="body">
+                <h2 style="margin-top:20px;">반응형 디자인</h2>
+                <p style="margin-top:40px;">
+                    화면의 크기에 따라 웹페이지의 각 요소들이 반응해서 최적화된 모양으로 바뀌는 것을 repsonsive web(반응형 디자인)이라고 한다.
+                </p>
+                <p style= "margin-top:40px;">
+                    제 각각의 디바이스나 웹환경에서 각 사용자를 위한 최적화된 구현이 어려웠는데 이러한 문제속에 다양한 환경에서 적응할 수 있는 웹페이지를 만들도록 도와준 개념이 바로 responsive web과 media query 개념이다.<br><br>
+                
+               
+
+                    <a href="web2_css7_반응형디자인_mediaquery.html"><u style="color:gray;">MediaQuery 참조</u></a>
+                    
+                
+                </p>
+                <p style= "margin-top:40px;">
+                    해당 페이지와 참조페이지인 MediaQuery 참조부터는 반응형 디자인을 적용시켰다.
+            </div>
+        </div>
+    </body>
+</html>
+

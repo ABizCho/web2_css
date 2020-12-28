@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB2-CSS</title>
+        <meta charset="utf-8">
+        <style>
+        #grid {
+            display:grid;
+            grid-template-columns: 190px 1fr;
+        }
+        /*
+        block level element
+        */
+        h1 {
+            font-size:100px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin: 0px;
+            padding: 30px;
+            
+        } 
+
+        h2 {
+            margin-top:100px;
+        }
+        #grid ol { 
+            border-right: 1px solid gray;
+            width:130px;
+            margin-top:0px;
+            padding:20px;
+        }
+        body {
+            margin:0px;
+        }
+
+        /* in-line element
+        */
+        a { 
+            text-decoration:none;
+            
+            color:black;
+        }  
+
+        p {
+            margin-top:70px;
+        }   
+
+        .saw { 
+               color:gray;
+        }
+        
+        #main_title {
+            color:lightgreen;
+        }
+        #see {
+               color:lightgreen;
+               text-decoration: underline;
+        }
+        
+        
+          
+         </style>
+
+
+    </head>
+    <body>
+        <h1><a href="index.html" id="main_title">CSS</a></h1>
+        <div id="grid">
+            <ol>
+                <li><a href="index.html" class="saw">CSS란</a></li>
+                <li><a href="web2_css1_css예시.html" class="saw">CSS예시</a></li>
+                <li><a href="web2_css2_선택자와속성.html" class="saw">선택자와속성</a></li>
+                <li><a href="web2_css3_속성탐색.html" class="saw">속성탐색</a></li>
+                <li><a href="web2_css4_선택자탐색.html" class="saw">선택자탐색</a></li>
+                <li><a href="web2_css5_박스모델.html" class="saw">박스모델</a></li>
+                <li><a href="web2_css6_그리드.html" id="see">그리드</a></li>
+                <li><a href="web2_css7_반응형디자인.html">반응형디자인</a></li>
+                <li><a href="web2_css8_CSS코드재사용.html">CSS코드재사용</a></li>
+            </ol>
+            <div>
+                <h2 style="margin-top:20px;">그리드</h2>
+                <p style="margin-top:40px;">
+                    해당 페이지에선 그리드 개념을 이용하여 전페이지에서 꾸며놨던 목차의 border를 활용한 레이아웃에 맞게 본문의 text를 위치시키고자 한다.
+                    <br>
+        
+                    <a href="web2_css6_그리드_참조.html" style="text-decoration:underline;">(그리드개념 참조)</a>
+                </p>
+                <p>
+                    <strong style="font-size:20px">+ 선택자 TIP)</strong><br style="margin-bottom:45px;">
+                    선택자를 활용하여 태그나 요소를 특정하려 할 때 <br><br>
+                    #id명 태그명 {} <br><br>
+                    #id명 #id명 {} <br><br>
+
+                    등 #id ,.class, 태그 이름들의 조합으로 구체적인 요소를 특정할 수 있다.
+                    
+                </p> 
+            </div>
+        </div>
+
